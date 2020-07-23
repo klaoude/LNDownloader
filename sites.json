@@ -1,0 +1,94 @@
+[
+    {
+        "LNs": [
+            {
+                "__class__": "Novel", 
+                "__module__": "Novel", 
+                "baseurl": "https://xiaowaz.fr/series-en-cours/overgeared/", 
+                "findChapter": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "refindall", 
+                        "re": "href=\\\"([^ ]*?)\\\" title=\\\"(.*?)\\\"", 
+                        "string": ""
+                    }
+                ], 
+                "name": "Overgeared (FR)", 
+                "regex": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 2, 
+                        "maxsplit": 1, 
+                        "op": "resplit", 
+                        "re": "<p(.*?)><strong>", 
+                        "string": ""
+                    }, 
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "<div class=\"abh_box abh_box_down abh_box_business\">"
+                    }
+                ], 
+                "reverse": false
+            }
+        ], 
+        "__class__": "NovelSite", 
+        "__module__": "Novel", 
+        "name": "xiaowaz.fr", 
+        "url": "https://xiaowaz.fr/"
+    }, 
+    {
+        "LNs": [
+            {
+                "__class__": "Novel", 
+                "__module__": "Novel", 
+                "baseurl": "https://www.novelcool.com/novel/Overgeared.html", 
+                "findChapter": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "refindall", 
+                        "re": "href=\"([^ ]*?)\" title=\"(Over.*?)\"", 
+                        "string": ""
+                    }
+                ],
+                "name": "Overgeared (EN)", 
+                "regex": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 1, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "</center>"
+                    },
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "<div id='_vdo_ads_player_ai_2463'></div>"
+                    }  
+                ],
+                "reverse": true
+            }
+        ], 
+        "__class__": "NovelSite", 
+        "__module__": "Novel", 
+        "name": "novelcool.com", 
+        "url": "https://www.novelcool.com/"
+    }
+]
