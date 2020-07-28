@@ -2,7 +2,7 @@ from Novel import *
 
 mkdir(DOWNLOAD_FOLDER)
 
-LoadJSON("sites.json")
+LN_SITES = LoadJSON("sites.json")
 
 print "Please enter site number."
 for i in range(len(LN_SITES)):

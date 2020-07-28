@@ -1,7 +1,5 @@
-import json
 import requests
 from tqdm import tqdm
-from google.cloud import translate_v2 as translate
 
 from Utils import *
 
@@ -45,10 +43,6 @@ class Novel():
         for op in self.regex:
             content = op.Execute(content)
         content = removeHttp(content)
-
-        translate_client = translate.Client()
-        result = translate_client.translate(content, target_language="fr")
-        print result['translatedText']
 
         with open(path + "/" + name + ".txt", "w") as f:
             f.write(content.encode("utf-8"))
