@@ -38,6 +38,82 @@
                     }
                 ], 
                 "reverse": false
+            },
+            {
+                "__class__": "Novel", 
+                "__module__": "Novel", 
+                "baseurl": "https://xiaowaz.fr/series-en-cours/rebirth-of-the-thief-who-roamed-the-world/", 
+                "findChapter": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "refindall", 
+                        "re": "href=\\\"([^ ]*?)\\\" title=\\\"(.*?)\\\"", 
+                        "string": ""
+                    }
+                ], 
+                "name": "Rebirth of The Thief Who Roamed The World", 
+                "regex": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 2, 
+                        "maxsplit": 1, 
+                        "op": "resplit", 
+                        "re": "<p(.*?)><strong>", 
+                        "string": ""
+                    }, 
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "<div class=\"abh_box abh_box_down abh_box_business\">"
+                    }
+                ], 
+                "reverse": false
+            },
+            {
+                "__class__": "Novel", 
+                "__module__": "Novel", 
+                "baseurl": "https://xiaowaz.fr/series-en-cours/tales-of-demons-and-gods/", 
+                "findChapter": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "refindall", 
+                        "re": "href=\\\"([^ ]*?)\\\" title=\\\"(.*?)\\\"", 
+                        "string": ""
+                    }
+                ], 
+                "name": "Tales of Demons and Gods", 
+                "regex": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 2, 
+                        "maxsplit": 1, 
+                        "op": "resplit", 
+                        "re": "<p(.*?)><strong>", 
+                        "string": ""
+                    }, 
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "<div class=\"abh_box abh_box_down abh_box_business\">"
+                    }
+                ], 
+                "reverse": false
             }
         ], 
         "__class__": "NovelSite", 
@@ -90,5 +166,69 @@
         "__module__": "Novel", 
         "name": "novelcool.com", 
         "url": "https://www.novelcool.com/"
+    },
+    {
+        "LNs": [
+            {
+                "__class__": "Novel", 
+                "__module__": "Novel", 
+                "baseurl": "https://www.scan-manga.com/lecture-en-ligne/I-Alone-Level-Up-Novel-SL-Novel-1-Chapitre-1-FR_93096.html", 
+                "findChapter": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 2, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "</select>"
+                    },
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "refindall", 
+                        "re": "<option value='(.*?)'.*?>(.*?)</option>", 
+                        "string": ""
+                    },
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "follow_redirect", 
+                        "re": "", 
+                        "string": "https://www.scan-manga.com/lecture-en-ligne/5613/"
+                    }
+                ],
+                "name": "I Alone Level-Up", 
+                "regex": [
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 1, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "<h2 class=\"ln_c_title\">"
+                    },
+                    {
+                        "__class__": "Operation", 
+                        "__module__": "Novel", 
+                        "keep": 0, 
+                        "maxsplit": 0, 
+                        "op": "split", 
+                        "re": "", 
+                        "string": "</article>"
+                    }  
+                ],
+                "reverse": true
+            }
+        ], 
+        "__class__": "NovelSite", 
+        "__module__": "Novel", 
+        "name": "scan-manga.com", 
+        "url": "https://www.scan-manga.com/"
     }
 ]
